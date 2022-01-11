@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        android:background="?colorPrimary">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Watch Video Ad?"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Watch Ads to support us"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_marginBottom="14dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Watching Ads will help us to keep our service free. Thank you for your support❤️"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="14dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_height="wrap_content"
+        android:text="Try Again 🥺"
+        android:id="@+id/loadfailedButton"/>
+
+</LinearLayout>
+
+

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:ads="http://schemas.android.com/apk/res-auto"
+	xmlns:card_view="http://schemas.android.com/apk/res-auto"
+	android:orientation="vertical"
+	android:id="@+id/mainV"
+	android:fitsSystemWindows="true"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+
+	<com.google.android.material.appbar.AppBarLayout
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:theme="@style/AppTheme.AppBarOverlay">
+
+		<com.google.android.gms.ads.AdView
+            android:id="@+id/ads"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="3dp"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-9912895734802521/2156001887">
+
+		</com.google.android.gms.ads.AdView>
+
+		<androidx.appcompat.widget.Toolbar
+			android:id="@+id/toolbar_main"
+			android:background="?colorPrimary"
+			android:layout_width="fill_parent"
+			android:layout_height="?actionBarSize"
+			app:popupTheme="@style/AppTheme.PopupOverlay"/>
+
+	</com.google.android.material.appbar.AppBarLayout>
+
+	<androidx.cardview.widget.CardView
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="10.0dip"
+		android:layout_marginRight="10.0dip"
+		android:layout_marginBottom="10.0dip"
+		card_view:cardCornerRadius="2.0dip"
+		android:layout_marginTop="5dp">
+
+		<EditText
+			android:id="@+id/editTextUrl"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:hint="Url (eg: mahlx.com)"
+			android:maxLines="4"
+			android:inputType="textMultiLine|textUri"/>
+
+	</androidx.cardview.widget.CardView>
+
+	<androidx.cardview.widget.CardView
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="10.0dip"
+		android:layout_marginRight="10.0dip"
+		android:layout_marginBottom="10.0dip"
+		card_view:cardCornerRadius="2.0dip"
+		android:layout_marginTop="5dp">
+
+		<EditText
+			android:id="@+id/editTextProxy"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:hint="Proxy (ip:port)"
+			android:maxLines="4"
+			android:inputType="textUri"/>
+
+	</androidx.cardview.widget.CardView>
+
+	<androidx.cardview.widget.CardView
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="10.0dip"
+		android:layout_marginRight="10.0dip"
+		android:layout_marginBottom="10.0dip"
+		card_view:cardCornerRadius="2.0dip"
+		android:layout_marginTop="5dp">
+
+		<RelativeLayout
+			android:layout_height="50dp"
+			android:layout_width="match_parent">
+
+			<Spinner
+				android:entries="@array/request"
+				android:id="@+id/spinnerRequestMethod"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:background="#00000000"/>
+
+			<ImageView
+				android:layout_gravity="center"
+				android:layout_width="50.0dip"
+				android:layout_height="wrap_content"
+				android:src="@drawable/drop"
+				android:tint="@color/colorPrimary"
+				android:layout_alignParentRight="true"
+				android:layout_centerVertical="true"/>
+
+		</RelativeLayout>
+
+	</androidx.cardview.widget.CardView>
+
+	<androidx.cardview.widget.CardView
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="10.0dip"
+		android:layout_marginRight="10.0dip"
+		android:layout_marginBottom="10.0dip"
+		card_view:cardCornerRadius="2.0dip"
+		card_view:cardBackgroundColor="@color/colorPrimary"
+		android:layout_marginTop="10dp">
+
+		<Button
+			android:id="@+id/buttonSearch"
+			android:layout_height="wrap_content"
+			android:text="Check"
+			android:background="@android:color/transparent"
+			android:onClick="buttonSearch"
+			android:layout_width="match_parent"/>
+
+	</androidx.cardview.widget.CardView>
+
+	<CheckBox
+		android:id="@+id/checkBoxDirectRequest"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Direct Request"/>
+
+	<ListView
+		android:id="@+id/listLogs"
+		android:clickable="false"
+		android:longClickable="false"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:transcriptMode="alwaysScroll"
+		android:choiceMode="none"
+		android:layout_below="@+id/inputLayoutSetting"/>
+
+	<TextView
+		android:id="@+id/dt"
+		android:visibility="gone"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Text"/>
+
+</LinearLayout>

@@ -1,0 +1,63 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+	<item
+        android:id="@+id/login_menu"
+        android:icon="@drawable/ic_person_white_24dp"
+		app:showAsAction="always"
+        android:title="Login">
+    </item>
+
+
+
+	<item
+		android:icon="@drawable/import_export"
+		app:showAsAction="always"
+        android:id="@+id/miSetting"
+        android:title="@string/settings_ImportExport">
+		<menu>
+			<item
+				android:icon="@drawable/ic_import"
+				app:showAsAction="always"
+                android:id="@+id/miSettingImportar"
+                android:title="@string/settings_import" />
+            <item
+				android:icon="@drawable/ic_export"
+				app:showAsAction="always"
+                android:id="@+id/miSettingExportar"
+                android:title="@string/settings_export" />
+
+			<!--<item
+			app:showAsAction="always"
+			android:id="@+id/tunneloptions"
+			android:title="Tunnel Options" />-->
+
+		</menu>
+    </item>
+	
+	<item
+		android:icon="@drawable/ic_dots"
+		app:showAsAction="always"
+        android:id="@+id/menus"
+        android:title="@string/clear_settings">
+		<menu>
+			<item
+				android:icon="@drawable/ic_restore"
+				app:showAsAction="always"
+				android:id="@+id/miLimparConfig"
+				android:title="@string/clear_settings"/>
+
+		<!--	<item android:id="@+id/guide"
+				app:showAsAction="always"
+				android:icon="@drawable/ic_ask"
+				android:title="Guides"/>-->
+			<item
+				android:icon="@drawable/ic_exit"
+				app:showAsAction="always"
+				android:id="@+id/miExit"
+				android:title="@string/exit"/>
+		</menu>
+	</item>
+</menu>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:layout_gravity="top|center">
+
+	<LinearLayout
+		android:focusable="true"
+		android:focusableInTouchMode="true"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:gravity="top|center"
+		android:padding="10dp">
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/payload_layout">
+
+			<LinearLayout
+				android:orientation="horizontal"
+				android:layout_width="match_parent"
+				android:layout_height="40dp"
+				android:padding="5dp"
+				android:layout_margin="10dp"
+				android:background="@drawable/payload_johnyx"
+				android:gravity="center">
+
+				<com.google.android.material.textfield.TextInputLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content">
+
+					<com.google.android.material.textfield.TextInputEditText
+						android:paddingRight="5dp"
+						android:paddingLeft="5dp"
+						android:background="#00000000"
+						android:textSize="15sp"
+						android:id="@+id/fragment_custom_sni"
+						android:inputType="textMultiLine|textLongMessage"
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content"
+						android:ems="10"
+						android:textColor="@color/colorText"
+						android:singleLine="true"/>
+					
+				</com.google.android.material.textfield.TextInputLayout>
+
+			</LinearLayout>
+
+			<TextView
+				android:textStyle="bold"
+				android:typeface="serif"
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:text="   Hostname - (eg. mahlx.com)   "
+				android:layout_marginTop="3dp"
+				android:background="@color/colorSecondaryBackground"
+				android:layout_marginLeft="25dp"/>
+			
+		</RelativeLayout>
+
+		<LinearLayout
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:orientation="horizontal"
+			android:gravity="right|center"
+			android:layout_marginTop="5dp"
+			android:padding="5dp">
+
+			<Button
+				android:id="@+id/fragment_sni_remoteCancelButton"
+				android:layout_height="42dp"
+				android:layout_width="wrap_content"
+				android:background="@android:color/transparent"
+				android:text="@string/cancel"
+				android:layout_marginRight="10dp"/>
+
+			<Button
+				android:id="@+id/fragment_sni_remoteSaveButton"
+				android:layout_height="42dp"
+				android:layout_width="wrap_content"
+				android:background="@android:color/transparent"
+				android:text="@string/save"/>
+
+		</LinearLayout>
+
+	</LinearLayout>
+
+</ScrollView>
+

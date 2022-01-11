@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<androidx.appcompat.widget.Toolbar
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		android:id="@+id/toolbar_main"
+		android:theme="@style/ToolbarTheme"
+		android:background="?attr/colorPrimary"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:minHeight="?attr/actionBarSize"
+		app:titleTextAppearance="@style/ToolbarTitleTheme"
+		app:subtitleTextAppearance="@style/ToolbarSubtitleTheme"
+		app:popupTheme="@style/AppTheme.PopupOverlay"/>
+
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:orientation="vertical">
+
+		<androidx.cardview.widget.CardView
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			app:cardCornerRadius="2.0dip"
+			app:cardElevation="2.0dip"
+			app:contentPadding="10dip"
+			android:id="@+id/tunnel"
+			
+			android:layout_marginLeft="8dp"
+			android:layout_marginRight="8dp"
+			android:layout_marginTop="10dp"
+			android:background="#FF396FFF">
+
+			<LinearLayout
+				android:orientation="vertical"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content">
+
+				<LinearLayout
+					android:orientation="vertical"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_margin="5dp">
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="Tunnel Type:"
+						android:textAppearance="?android:attr/textAppearanceSmall"
+						android:textStyle="bold"/>
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:textAppearance="?android:attr/textAppearanceSmall"
+						android:layout_marginTop="4dp"
+						android:typeface="monospace"
+						android:id="@+id/tunneltypeTextView1"
+						android:textStyle="bold"/>
+
+				</LinearLayout>
+
+			</LinearLayout>
+
+		</androidx.cardview.widget.CardView>
+
+		<androidx.cardview.widget.CardView
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			app:cardCornerRadius="2.0dip"
+			app:cardElevation="2.0dip"
+			app:contentPadding="10dip"
+			android:id="@+id/tunnel_"
+			android:layout_marginLeft="8dp"
+			android:layout_marginRight="8dp"
+			android:layout_marginTop="10dp">
+
+			<LinearLayout
+				android:orientation="vertical"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_margin="5dp">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Tunnel Type:"
+					android:textAppearance="?android:attr/textAppearanceSmall"
+					android:textStyle="bold"/>
+
+				<LinearLayout
+					android:orientation="horizontal"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content">
+
+					<RadioButton
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_weight="1.0"
+						android:text="Secure Shell"
+						android:id="@+id/btnTYPE"/>
+					
+					<RadioButton
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_weight="1.0"
+						android:text="SlowDNS"
+						android:id="@+id/btnSlowDNS"/>
+
+					
+
+				</LinearLayout>
+				
+			</LinearLayout>
+			
+		</androidx.cardview.widget.CardView>
+		
+		<androidx.cardview.widget.CardView
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			app:cardCornerRadius="2.0dip"
+			app:cardElevation="2.0dip"
+			app:contentPadding="10dip"
+			android:id="@+id/tunnel___"
+			android:layout_marginLeft="8dp"
+			android:layout_marginRight="8dp"
+			android:layout_marginTop="10dp">
+
+			<LinearLayout
+				android:orientation="vertical"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_margin="5dp">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Socket Layer Type:"
+					android:textAppearance="?android:attr/textAppearanceSmall"
+					android:textStyle="bold"/>
+
+				<LinearLayout
+					android:orientation="horizontal"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="10dp">
+
+					<RadioButton
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_weight="1.0"
+						android:text="Direct SSH"
+						android:id="@+id/activity_mainSSHDirectRadioButton"/>
+
+					
+					
+					<RadioButton
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_weight="1.0"
+						android:text="TLS/SSL"
+						android:id="@+id/activity_mainSSLProxyRadioButton"/>
+
+				</LinearLayout>
+
+				<LinearLayout
+					android:orientation="horizontal"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content">
+
+					<RadioButton
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:text="HTTP Proxy"
+						android:id="@+id/activity_mainSSHProxyRadioButton"
+						android:layout_weight="1.0"/>
+
+					<RadioButton
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_weight="1.0"
+						android:text="SSL/Payload"
+						android:id="@+id/activity_mainSSLPayloadRadioButton"/>
+
+				</LinearLayout>
+				
+			</LinearLayout>
+
+		</androidx.cardview.widget.CardView>
+
+		<androidx.cardview.widget.CardView
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			app:cardCornerRadius="2.0dip"
+			app:cardElevation="2.0dip"
+			app:contentPadding="10dip"
+			android:id="@+id/tunnel__"
+			android:layout_marginLeft="8dp"
+			android:layout_marginRight="8dp"
+			android:layout_marginTop="10dp">
+
+			<LinearLayout
+				android:orientation="vertical"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_margin="5dp">
+
+				<LinearLayout
+					android:orientation="vertical"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content">
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="Include."
+						android:textAppearance="?android:attr/textAppearanceSmall"
+						android:textStyle="bold"/>
+
+					<LinearLayout
+						android:orientation="vertical"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="10dp">
+
+						<CheckBox
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="Custom Payload"
+							android:id="@+id/activity_mainCustomPayloadSwitch"/>
+
+					</LinearLayout>
+
+				</LinearLayout>
+
+			</LinearLayout>
+
+		</androidx.cardview.widget.CardView>
+		
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center">
+
+			<LinearLayout
+				android:id="@+id/load_tunnel"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="5dp"
+				android:layout_marginBottom="7dp"/>
+
+		</LinearLayout>
+		
+
+		<View
+			android:layout_width="1dp"
+			android:layout_height="match_parent"
+			android:layout_weight="1.0"/>
+
+		<com.slipkprojects.sockshttp.view.MaterialButton
+			android:typeface="monospace"
+			android:id="@+id/saveButton"
+			android:layout_width="match_parent"
+			android:layout_height="40dp"
+			android:layout_margin="10dp"
+			android:text="@string/save"
+			app:cornerRadius="5dp"
+			android:textColor="#FFFFFFFF"/>
+		
+	</LinearLayout>
+
+</LinearLayout>
+

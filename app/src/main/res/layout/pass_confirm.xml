@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:padding="10dp">
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Are you sure you want to set password?"
+		android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="If you want to set password"
+		android:textAppearance="?android:attr/textAppearanceSmall"
+		android:layout_marginTop="15dp"
+		android:textStyle="bold"/>
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="1.Make sure you keep this box checked"
+		android:textAppearance="?android:attr/textAppearanceSmall"
+		android:layout_marginTop="6dp"/>
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="2.Go to SSH Settings and remove password"
+		android:textAppearance="?android:attr/textAppearanceSmall"
+		android:layout_marginTop="3dp"/>
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="3.The user will need to enter the SSH password you removed"
+		android:textAppearance="?android:attr/textAppearanceSmall"
+		android:layout_marginTop="3dp"/>
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Click Yes to confirm"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:layout_marginTop="7dp"/>
+
+</LinearLayout>
+

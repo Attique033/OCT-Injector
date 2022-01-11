@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:id="@+id/exportLinearLayout">
+
+	<FrameLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/payload_layout">
+
+		<include
+			layout="@layout/toolbar_main"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"/>
+
+		<com.google.android.material.floatingactionbutton.FloatingActionButton
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:id="@+id/export_config"
+			app:backgroundTint="?colorPrimary"
+			android:src="@drawable/ic_baseline_save_24"
+			android:layout_marginTop="20dp"
+			android:layout_marginLeft="350dp"/>
+
+	</FrameLayout>
+
+	<ScrollView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:gravity="top|center"
+		android:background="@color/colorPrimaryBackground"
+		android:padding="5dp">
+
+		<androidx.cardview.widget.CardView
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			app:cardCornerRadius="2.0dip"
+			app:cardElevation="2.0dip"
+			app:contentPadding="10dip"
+			android:id="@+id/tunnel"
+			android:padding="8dp"
+			android:background="#FF396FFF">
+
+			<LinearLayout
+				android:id="@+id/activity_config_exportMainLinearLayout"
+				android:layout_height="match_parent"
+				android:layout_width="match_parent"
+				android:focusable="true"
+				android:focusableInTouchMode="true"
+				android:orientation="vertical">
+
+				<RelativeLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:id="@+id/payload_layout_">
+
+					<LinearLayout
+						android:orientation="horizontal"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_margin="10dp"
+						android:background="@drawable/payload_johnyx"
+						android:gravity="center">
+
+						<com.google.android.material.textfield.TextInputLayout
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content">
+
+							<com.google.android.material.textfield.TextInputEditText
+								android:paddingRight="5dp"
+								android:minHeight="30dp"
+								android:maxLength="40"
+								android:paddingLeft="5dp"
+								android:background="#00000000"
+								android:textSize="14sp"
+								android:id="@+id/activity_config_exportNomeEdit"
+								android:inputType="textMultiLine|textLongMessage"
+								android:layout_width="fill_parent"
+								android:layout_height="wrap_content"
+								android:ems="10"/>
+
+						</com.google.android.material.textfield.TextInputLayout>
+
+					</LinearLayout>
+
+					<TextView
+						android:textStyle="bold"
+						android:typeface="serif"
+						android:layout_height="wrap_content"
+						android:layout_width="wrap_content"
+						android:text="   File Name   "
+						android:layout_marginTop="3dp"
+						android:background="@color/colorSecondaryBackground"
+						android:layout_marginLeft="25dp"/>
+
+				</RelativeLayout>
+
+				<androidx.appcompat.widget.AppCompatCheckBox
+					android:id="@+id/activity_config_exportProtegerCheck"
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:textColor="@color/colorText"
+					android:hint="@string/check_protect"
+					android:layout_marginTop="5dp"/>
+
+				<RelativeLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:id="@+id/payload_layout__"
+					android:layout_marginTop="2dp">
+
+					<LinearLayout
+						android:orientation="horizontal"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="5dp"
+						android:padding="5dp">
+
+						<com.google.android.material.textfield.TextInputLayout
+							android:id="@+id/activity_config_exportLayoutMensagemEdit"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							app:counterEnabled="true"
+							app:counterMaxLength="250">
+
+							<com.google.android.material.textfield.TextInputEditText
+								android:padding="8dp"
+								android:gravity="top"
+								android:background="@drawable/payload_johnyx"
+								android:textSize="20sp"
+								android:minHeight="120dp"
+								android:maxLength="250"
+								android:id="@+id/activity_config_exportMensagemEdit"
+								android:inputType="textMultiLine|textLongMessage"
+								android:layout_width="fill_parent"
+								android:layout_height="wrap_content"
+								android:ems="10"/>
+
+						</com.google.android.material.textfield.TextInputLayout>
+
+					</LinearLayout>
+
+					<TextView
+						android:textStyle="bold"
+						android:typeface="serif"
+						android:layout_height="wrap_content"
+						android:layout_width="wrap_content"
+						android:text=" Description Message (HTML) "
+						android:layout_marginTop="13dp"
+						android:background="@color/colorSecondaryBackground"
+						android:layout_marginLeft="25dp"/>
+
+				</RelativeLayout>
+
+				<TextView
+					android:textStyle="bold"
+					android:typeface="serif"
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:text="   Advanced Security   "
+					android:layout_marginTop="5dp"/>
+
+				<LinearLayout
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:orientation="horizontal">
+
+					<CheckBox
+						android:id="@+id/activity_config_exportBlockRootCheck"
+						android:layout_height="wrap_content"
+						android:layout_width="170dp"
+						android:textColor="@color/colorText"
+						android:hint="@string/check_block_root"/>
+
+					<LinearLayout
+						android:layout_height="wrap_content"
+						android:layout_width="match_parent"
+						android:orientation="horizontal"
+						android:paddingBottom="5dp">
+
+						<CheckBox
+							android:id="@+id/activity_config_exportValidadeCheck"
+							android:layout_height="wrap_content"
+							android:layout_width="wrap_content"
+							android:textColor="@color/colorText"
+							android:layout_marginLeft="20dp"
+							android:hint="@string/check_date_valid"/>
+
+						<TextView
+							android:id="@+id/activity_config_exportValidadeText"
+							android:layout_height="match_parent"
+							android:layout_width="wrap_content"
+							android:text="(Unknown)"
+							android:textStyle="bold"
+							android:gravity="center"
+							android:layout_marginLeft="5dp"
+							android:visibility="invisible"/>
+
+					</LinearLayout>
+
+				</LinearLayout>
+
+				<LinearLayout
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:orientation="horizontal">
+
+					<CheckBox
+						android:id="@+id/mobile_data"
+						android:layout_height="wrap_content"
+						android:layout_width="170dp"
+						android:textColor="@color/colorText"
+						android:hint="Mobile Data Only"/>
+
+					<LinearLayout
+						android:layout_height="wrap_content"
+						android:layout_width="match_parent"
+						android:orientation="horizontal"
+						android:paddingBottom="5dp">
+
+						<CheckBox
+							android:id="@+id/config_pass"
+							android:layout_height="wrap_content"
+							android:layout_width="wrap_content"
+							android:textColor="@color/colorText"
+							android:layout_marginLeft="20dp"
+							android:hint="Set Password"/>
+
+					</LinearLayout>
+
+				</LinearLayout>
+
+				<com.google.android.gms.ads.AdView
+                    xmlns:ads="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/load_export"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="5dp"
+                    ads:adSize="BANNER"
+                    ads:adUnitId="ca-app-pub-9912895734802521/2156001887"
+                    android:layout_gravity="center"
+                    android:visibility="gone">
+
+				</com.google.android.gms.ads.AdView>
+
+			</LinearLayout>
+
+		</androidx.cardview.widget.CardView>
+
+	</ScrollView>
+
+</LinearLayout>
+

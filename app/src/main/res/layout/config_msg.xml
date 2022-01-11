@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:id="@+id/nested_scroll_view"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:scrollbars="none"
+	android:scrollingCache="true">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:foreground="?android:attr/selectableItemBackground"
+			android:orientation="horizontal"
+			android:id="@+id/configmsgheader">
+
+			<TextView
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:text="Config Message"
+				android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+
+			<ImageButton
+				android:id="@+id/bt_toggle_input"
+				android:layout_width="25dp"
+				android:layout_height="25dp"
+				android:background="?attr/selectableItemBackgroundBorderless"
+				android:tint="?colorPrimary"
+				app:srcCompat="@drawable/arrow_down"/>
+
+		</LinearLayout>
+
+		<LinearLayout
+			android:id="@+id/lyt_expand_input"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical">
+
+			<LinearLayout
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:orientation="vertical"
+				android:padding="5dp">
+
+				<TextView
+					android:id="@+id/configMSGText"
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:autoLink="web"
+					android:layout_marginLeft="5dp"
+					android:textSize="15sp"
+					android:textStyle="bold"/>
+
+			</LinearLayout>
+
+		</LinearLayout>
+
+	</LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
+

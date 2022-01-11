@@ -1,0 +1,54 @@
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+	<PreferenceCategory
+		android:title="SlowDNS">
+
+		<com.slipkprojects.sockshttp.view.SummaryEditTextPreference
+            android:key="chaveKey"
+            android:title="@string/public_key"
+            android:summary="@string/summary_private_key"
+            android:dialogMessage=""
+			android:singleLine="false"
+			android:dialogLayout="@layout/pref_dialog_edittext_fix" />
+
+		<com.slipkprojects.sockshttp.view.SummaryEditTextPreference
+            android:key="serverNameKey"
+            android:title="@string/title_name_server"
+            android:summary="@string/summary_name_server"
+            android:dialogMessage=""
+			android:singleLine="true"
+			android:dialogLayout="@layout/pref_dialog_edittext_fix" />
+
+		<com.slipkprojects.sockshttp.view.SummaryEditTextPreference
+            android:key="dnsKey"
+            android:title="DNS"
+			android:summary="@string/summary_dns"
+			android:singleLine="true"
+			android:defaultValue="8.8.8.8"
+			android:dialogLayout="@layout/pref_dialog_number" />
+
+	</PreferenceCategory>
+
+	<PreferenceCategory
+		android:title="@string/slowdns_configuration">
+
+		<com.slipkprojects.sockshttp.view.SummaryEditTextPreference
+            android:key="sshUser"
+            android:title="@string/auth_username"
+            android:summary="none"
+            android:dialogMessage=""
+			android:singleLine="true"
+			android:dialogLayout="@layout/pref_dialog_edittext_fix" />
+
+		<com.slipkprojects.sockshttp.view.SummaryEditTextPreference
+            android:key="sshPass"
+            android:title="@string/proxy_pass"
+            android:summary="none"
+            android:dialogMessage=""
+			android:singleLine="true"
+            android:dialogLayout="@layout/pref_dialog_edittext_fix" />
+
+	</PreferenceCategory>
+
+
+</PreferenceScreen>

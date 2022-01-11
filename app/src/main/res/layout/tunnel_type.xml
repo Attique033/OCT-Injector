@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:gravity="center">
+
+	<LinearLayout
+		android:orientation="horizontal"
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:gravity="center">
+
+		<TextView
+			android:id="@+id/activity_mainMetodoConexaoText"
+			android:layout_marginLeft="15dp"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:text="@string/method_connection"
+			android:gravity="center"
+			android:textStyle="bold"
+			android:layout_marginBottom="5dp"
+			android:layout_marginTop="5dp"/>
+
+	</LinearLayout>
+
+	<HorizontalScrollView
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:id="@+id/tunnel_type_options">
+
+		<RadioGroup
+			android:id="@+id/activity_mainMetodoConexaoRadio"
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:orientation="horizontal"
+			android:breakStrategy="balanced"
+			android:gravity="center"
+			android:layout_margin="2dp">
+
+			<RadioButton
+				android:textSize="15.0sp"
+				android:textColor="@drawable/radio_text_selected"
+				android:gravity="center"
+				android:id="@id/activity_mainSSHDirectRadioButton"
+				android:background="@drawable/radio_flat_selector"
+				android:paddingLeft="8.0dip"
+				android:paddingTop="3.0dip"
+				android:paddingRight="8.0dip"
+				android:paddingBottom="3.0dip"
+				android:layout_width="wrap_content"
+				android:layout_height="fill_parent"
+				android:checked="true"
+				android:button="@null"
+				android:text="DIRECT"/>
+
+			<RadioButton
+				android:textSize="15.0sp"
+				android:textColor="@drawable/radio_text_selected"
+				android:gravity="center"
+				android:id="@id/activity_mainSSHProxyRadioButton"
+				android:background="@drawable/radio_flat_selector2"
+				android:paddingLeft="8.0dip"
+				android:paddingTop="3.0dip"
+				android:paddingRight="8.0dip"
+				android:paddingBottom="3.0dip"
+				android:layout_width="wrap_content"
+				android:layout_height="fill_parent"
+				android:button="@null"
+				android:text="HTTP PROXY"/>
+
+			<RadioButton
+				android:textSize="15.0sp"
+				android:textColor="@drawable/radio_text_selected"
+				android:gravity="center"
+				android:id="@id/activity_mainSSLProxyRadioButton"
+				android:background="@drawable/radio_flat_selector3"
+				android:paddingLeft="8.0dip"
+				android:paddingTop="3.0dip"
+				android:paddingRight="8.0dip"
+				android:paddingBottom="3.0dip"
+				android:layout_width="wrap_content"
+				android:layout_height="fill_parent"
+				android:button="@null"
+				android:text="SSL/TLS"/>
+
+			<RadioButton
+				android:textSize="15.0sp"
+				android:textColor="@drawable/radio_text_selected"
+				android:gravity="center"
+				android:id="@+id/activity_mainSSLPayloadRadioButton"
+				android:background="@drawable/radio_flat_selector4"
+				android:paddingLeft="8.0dip"
+				android:paddingTop="3.0dip"
+				android:paddingRight="8.0dip"
+				android:paddingBottom="3.0dip"
+				android:layout_width="wrap_content"
+				android:layout_height="fill_parent"
+				android:button="@null"
+				android:text="SSL/Pay"/>
+
+		</RadioGroup>
+
+	</HorizontalScrollView>
+
+	<LinearLayout
+		android:orientation="horizontal"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="8dp"
+		android:paddingLeft="10dp"
+		android:layout_marginBottom="8dp">
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/type_sel"
+			android:textStyle="bold"/>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:id="@+id/tunneltypeselected"
+			android:textStyle="bold"
+			android:paddingRight="5dp"/>
+
+	</LinearLayout>
+
+	<View
+		android:background="#ff797979"
+		android:layout_width="fill_parent"
+		android:layout_height="1.0dip"
+		android:layout_marginLeft="15.0dip"
+		android:layout_marginRight="15.0dip"/>
+
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="3dp">
+
+		<LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:paddingLeft="5dp"
+			android:gravity="center">
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="VPN Status:"
+				android:layout_marginRight="6dp"
+				android:typeface="serif"
+				android:gravity="center"/>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Disconnected"
+				android:paddingLeft="5dp"
+				android:id="@+id/status"
+				android:textStyle="bold"
+				android:typeface="serif"/>
+
+		</LinearLayout>
+
+	</LinearLayout>
+
+</LinearLayout>
+

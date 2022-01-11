@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+	<item 
+		android:height="25dp"
+		android:viewportHeight="25"
+		android:viewportWidth="25"
+		android:width="25dp">
+		<bitmap 
+			android:src="@drawable/ic_delete_forever_white_24dp" 
+		/>
+	</item>
+</layer-list>
+

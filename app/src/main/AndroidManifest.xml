@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	package="com.slipkprojects.sockshttp">
+	
+	
+	<!--- Permissions -->
+	<supports-screens
+		android:smallScreens="true"
+		android:normalScreens="true"
+		android:largeScreens="true"
+		android:xlargeScreens="true" />
+		
+	<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+	<uses-permission android:name="android.permission.GET_TASKS" />
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.VIBRATE" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.WRITE_SETTINGS" />
+	<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+		tools:ignore="ScopedStorage" />
+	<uses-permission
+		android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+		tools:ignore="ScopedStorage" />
+	<uses-permission android:name="android.permission.GET_TASKS" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.VIBRATE" />
+	
+	<!--- Application -->
+		
+    <application
+		android:name="com.slipkprojects.sockshttp.SocksHttpApp"
+		android:allowBackup="true"
+        android:icon="@drawable/app_launch"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+		android:resizeableActivity="true"
+        android:extractNativeLibs="true"
+        android:requestLegacyExternalStorage="true">
+		
+		
+		<!--- Activities -->
+		
+			
+		<activity android:name="com.slipkprojects.sockshttp.LauncherActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+		<activity android:name=".activities.LicenseActivity"/>
+		
+		<activity android:name="com.slipkprojects.sockshttp.SocksHttpMainActivity"
+			android:label="@string/app_name"/>
+		
+		<activity android:name="com.slipkprojects.sockshttp.activities.ConfigGeralActivity"
+			android:parentActivityName="com.slipkprojects.sockshttp.SocksHttpMainActivity"
+            android:label="@string/settings"/>
+		<activity android:name="com.slipkprojects.sockshttp.errors"/>
+		<activity android:name="com.slipkprojects.sockshttp.activities.ConfigImportFileActivity"
+			android:grantUriPermissions="true"
+			android:parentActivityName=".SocksHttpMainActivity"
+			android:label="@string/settings_import">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.BROWSABLE" />
+				<data android:scheme="file" />
+				<data android:scheme="content" />
+				<data android:mimeType="*/*" />
+				<data android:host="*" />
+				<data android:port="*" />
+				<data android:pathPattern=".*.oct"/>
+				<data android:pathPattern=".*..*.oct"/>
+				<data android:pathPattern=".*..*..*.oct"/>
+				<data android:pathPattern=".*..*..*..*.oct"/>
+				<data android:pathPattern=".*..*..*..*..*.oct"/>
+				<data android:pathPattern=".*..*..*..*..*..*.oct"/>
+				<data android:pathPattern=".*..*..*..*..*..*..*.oct"/>
+			</intent-filter>
+		</activity>
+		
+		<activity android:name="com.slipkprojects.sockshttp.util.HostChecker" />
+		<activity android:name="com.slipkprojects.sockshttp.util.IpHunter" />
+		
+		
+		<activity android:name="com.slipkprojects.sockshttp.activities.ConfigExportFileActivity"
+			android:parentActivityName=".SocksHttpMainActivity"
+			android:label="@string/settings_export"/>
+		
+		<activity android:name="com.slipkprojects.sockshttp.activities.AboutActivity"
+			android:parentActivityName=".SocksHttpMainActivity"
+            android:label="@string/about"/>
+		
+		<activity
+            android:name="com.slipkprojects.sockshttp.TunnelActivity"
+            android:parentActivityName="com.slipkprojects.sockshttp.SocksHttpMainActivity"
+            android:label="@string/tun_type"/>
+		
+		
+		<!--- Meta Data -->
+
+		<meta-data android:name="com.google.android.gms.ads.APPLICATION_ID"
+			android:value="ca-app-pub-9912895734802521~8721410234"/>
+		<meta-data android:name="com.google.android.gms.ads.AD_MANAGER_APP"
+			android:value="true" />
+		
+		
+		<!-- corrige bug em Android 9 -->
+		<uses-library
+			android:name="org.apache.http.legacy"
+			android:required="false" />
+		
+		
+    </application>
+
+	
+</manifest>

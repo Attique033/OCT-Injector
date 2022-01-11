@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+	
+	<declare-styleable name="MaterialButton">
+        <attr name="colorPressed" format="color" />
+        <attr name="colorNormal" format="color" />
+        <attr name="cornerRadius" format="dimension" />
+    </declare-styleable>
+	<declare-styleable name="ExpandCollapseCard">
+        <attr name="title" format="string" />
+        <attr name="title_size" format="dimension" />
+        <attr name="title_color" format="color" />
+        <attr name="title_background_color" format="color" />
+        <attr name="item_inner_view" format="reference" />
+        <attr name="expand_icon" format="reference" />
+        <attr name="collapse_icon" format="reference" />
+    </declare-styleable>
+	
+	
+	<declare-styleable name="ExpandableCardView">
+        <attr name="titlee" format="string"/>
+        <attr name="iconn" format="reference"/>
+        <attr name="inner_view" format="reference"/>
+        <attr name="expandOnClick" format="boolean"/>
+        <attr name="animationDuration" format="integer"/>
+        <attr name="startExpanded" format="boolean"/>
+    </declare-styleable>
+	
+
+	<declare-styleable name="ParticleView">
+        <attr name="pv_host_text" format="string"></attr>
+        <attr name="pv_host_text_size" format="dimension"></attr>
+        <attr name="pv_particle_text" format="string"></attr>
+        <attr name="pv_particle_text_size" format="dimension"></attr>
+        <attr name="pv_text_color" format="color"></attr>
+        <attr name="pv_background_color" format="color"></attr>
+        <attr name="pv_text_anim_time" format="integer"></attr>
+        <attr name="pv_spread_anim_time" format="integer"></attr>
+        <attr name="pv_host_text_anim_time" format="integer"></attr>
+		
+	</declare-styleable>
+	
+	<!-- Style geral do app -->
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+		<item name="colorPrimary">@color/colorPrimary</item>
+		<item name="colorPrimaryDark">@color/colorSecondary</item>
+		<item name="colorAccent">@color/colorAccent</item>
+		<item name="preferenceTheme">@style/AppPreference</item>
+		<item name="alertDialogTheme">@style/AppAlertDialog</item>
+		<item name="preferenceTheme">@style/PrefTheme</item>
+		<item name="android:fontFamily">@font/googlesans</item>
+		<!--<item name="android:textColorPrimary">@color/textColorPrimary</item>
+		<item name="android:textColorSecondary">@color/textColorSecondary</item>-->
+		<item name="android:textColor">@color/colorText</item>
+		<item name="android:textColorHint">@color/colorText</item>
+		<item name="android:navigationBarColor" tools:targetApi="21">@color/colorPrimary</item>
+		
+		<item name="buttonTint">@color/colorText</item>
+	</style>
+	
+	<!-- Alert Dialog -->
+	<style name="AppAlertDialog"
+        parent="Theme.AppCompat.Light.Dialog.Alert">
+		<item name="colorAccent">@color/colorAccent</item>
+		<item name="android:textColor">@color/colorText</item>
+		<item name="android:textColorHint">@color/colorText</item>
+		<item name="buttonTint">@color/colorText</item>
+		<item name="android:fontFamily">@font/googlesans</item>
+	</style>
+	
+	
+	<!-- Preference Theme -->
+<!--	<style name="AppPreference"-->
+<!--        parent="PreferenceThemeOverlay">-->
+<!--	</style>-->
+	
+	
+	<style name="TextLimitStyle" parent="TextAppearance.AppCompat.Small">
+    <item name="android:textColor">@color/colorAccent</item>
+		<item name="android:textStyle">bold</item>
+    <item name="android:textSize">18sp</item>
+	</style>
+
+	<style name="TextLimitError" parent="TextAppearance.AppCompat.Small">
+    <item name="android:textColor">@color/red</item>
+	</style>
+	
+	<!-- Toolbar theme -->
+	<style name="PrefTheme" parent="@style/PreferenceThemeOverlay">
+		<item name="preferenceFragmentListStyle">@style/customPreferenceFragmentList</item>
+		<item name="android:windowBackground">@color/prefBg</item>
+		<item name="android:tint">@color/colorAccent</item>
+		<item name="android:textSize">12.0dip</item>
+		<item name="android:paddingLeft">0dp</item>
+		<item name="android:paddingRight">0dp</item>
+		<item name="android:fontFamily">@font/googlesans</item>
+        <item name="preferenceCategoryStyle">@style/CategoryStyle</item>
+    </style>
+	<style name="CategoryStyle" parent="Preference.Category">
+        <item name="android:layout">@layout/pref_category_view</item>
+    </style>
+	<!-- Preference Theme -->
+	<style name="AppPreference"
+        parent="PreferenceThemeOverlay">
+	</style>
+	<style name="ToolbarTitleTheme"
+		parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Title">
+		<item name="android:textSize">19.0dip</item>
+		<item name="android:textColor">#ffffff</item>
+		<item name="android:textStyle">bold</item>
+		<item name="android:fontFamily">@font/googlesans</item>
+		<item name="android:shadowColor">#ff000000</item>
+		<item name="android:shadowDy">2.0</item>
+		<item name="android:shadowRadius">2.0</item>
+
+	</style>
+
+	<style name="customPreferenceFragmentList">
+		<item name="android:paddingLeft">0dp</item>
+		<item name="android:paddingRight">0dp</item>
+		<item name="android:paddingStart">0dp</item>
+		<item name="android:paddingEnd">0dp</item>
+	</style>
+
+	<style name="TextView0" parent="@android:style/TextAppearance">
+		<item name="android:textSize">9.0dip</item>
+	</style>
+	<style name="TextView" parent="@android:style/TextAppearance">
+		<item name="android:textSize">10.0dip</item>
+	</style>
+	<style name="TextView1" parent="@android:style/TextAppearance">
+		<item name="android:textSize">12.0dip</item>
+	</style>
+	<style name="TextView2" parent="@android:style/TextAppearance">
+		<item name="android:textSize">13.0dip</item>
+	</style>
+	<style name="TextView3" parent="@android:style/TextAppearance">
+		<item name="android:textSize">17.0dip</item>
+	</style>
+	<style name="TextView4" parent="@android:style/TextAppearance">
+		<item name="android:textSize">11.0dip</item>
+	</style>
+	<style name="TextView5" parent="@android:style/TextAppearance">
+		<item name="android:textSize">14.0dip</item>
+	</style>
+	<style name="TextView6" parent="@android:style/TextAppearance">
+		<item name="android:textSize">8.0dip</item>
+	</style>
+	<style name="ToolbarSubtitleTheme" 
+		parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle">
+		<item name="android:textStyle">bold|italic</item>
+		<item name="android:fontFamily">@font/googlesans</item>
+		<item name="android:textSize">10.0dip</item>
+		<item name="android:textColor">#ffffff</item>
+		<item name="android:shadowColor">#ff000000</item>
+		<item name="android:shadowDy">1.0</item>
+		<item name="android:shadowRadius">1.0</item>
+		<!-- Alert Dialog -->
+	</style>
+
+	<!-- Toolbar theme -->
+	<style name="ToolbarTheme" parent="@style/ThemeOverlay.AppCompat.ActionBar">
+		<!-- android:textColorPrimary is the color of the title text in the Toolbar  -->
+		<item name="android:textColorPrimary">@color/white</item>
+		<!-- actionMenuTextColor is the color of the text of action (menu) items  -->
+		<item name="actionMenuTextColor">@android:color/holo_green_light</item>
+		<!-- Tints the input fields like checkboxes and text fields -->
+		<item name="colorAccent">@color/gray</item>
+		
+		<!-- Applies to views in their normal state. -->
+		<item name="colorControlNormal">@color/white</item>
+		<!-- Applies to views in their activated state (i.e checked or switches) -->
+		<item name="colorControlActivated">@color/blue_light</item>
+		<!-- Applied to framework control highlights (i.e ripples or list selectors) -->
+		<item name="colorControlHighlight">@color/gray_light</item>
+		<item name="android:fontFamily">@font/googlesans</item>
+		<!-- Enable these below if you want clicking icons to trigger a ripple effect -->
+		<!-- 
+		<item name="selectableItemBackground">?android:selectableItemBackground</item>
+		<item name="selectableItemBackgroundBorderless">?android:selectableItemBackground</item> 
+		-->
+	</style>
+	
+	<!-- Necessario para o modo noturno-->
+	<style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+	<style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+	
+	<style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+		<item name="android:textColor">@color/white</item>
+		<item name="android:textSize">21sp</item>
+		<item name="android:textStyle">italic</item>
+		<item name="android:fontFamily">@font/googlesans</item>
+	</style>
+		
+	<style name="AppTheme.NoActionBar">
+		<item name="windowNoTitle">true</item>
+		<item name="windowActionBar">false</item>
+	</style>
+	
+	<!-- Style for Splash Screen -->
+    <style name="SplashScreenTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+		<item name="colorPrimaryDark">@color/colorSecondary</item>
+		<item name="colorAccent">@color/colorAccent</item>
+		<item name="android:fontFamily">@font/googlesans</item>
+		<item name ="android:windowBackground">@drawable/splash_screen_background</item>
+		<item name="android:navigationBarColor" tools:targetApi="21">@color/colorSecondary</item>
+    </style>
+	
+	
+</resources>

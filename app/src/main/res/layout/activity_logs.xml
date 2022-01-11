@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_height="match_parent"
+	android:layout_width="match_parent"
+	android:background="@android:color/transparent">
+
+	<androidx.cardview.widget.CardView
+		android:layout_width="fill_parent"
+		android:layout_height="match_parent"
+		app:cardBackgroundColor="@color/colorSecondaryBackground"
+		app:cardCornerRadius="4.0dip"
+		app:cardElevation="3.0dip"
+		android:layout_margin="3dp">
+
+		<LinearLayout
+			android:layout_height="match_parent"
+			android:layout_width="match_parent"
+			android:orientation="vertical">
+
+			<androidx.recyclerview.widget.RecyclerView
+				android:id="@+id/recyclerLog"
+				android:gravity="start"
+				android:layout_width="fill_parent"
+				android:layout_height="match_parent"
+				android:layout_alignParentLeft="true"/>
+
+		</LinearLayout>
+
+	</androidx.cardview.widget.CardView>
+
+	<com.google.android.material.floatingactionbutton.FloatingActionButton
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/clearLog"
+		android:src="@drawable/ic_delete_forever_white_24dp"
+		android:layout_marginBottom="40dp"
+		android:layout_alignParentBottom="true"
+		android:layout_alignParentRight="true"
+		android:layout_marginRight="10dp"
+		android:visibility="gone"/>
+
+</RelativeLayout>
+

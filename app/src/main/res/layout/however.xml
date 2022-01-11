@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/activity_mainInputPayloadLinearLayout">
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/payload_layout">
+
+			<LinearLayout
+				android:orientation="horizontal"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:padding="5dp"
+				android:layout_margin="10dp"
+				android:background="@drawable/payload_johnyx"
+				android:gravity="center">
+
+				<com.google.android.material.textfield.TextInputLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content">
+
+					<com.google.android.material.textfield.TextInputEditText
+						android:paddingRight="5dp"
+						android:paddingLeft="5dp"
+						android:background="#00000000"
+						android:textSize="14sp"
+						android:id="@+id/activity_mainInputPayloadEditText"
+						android:inputType="textMultiLine|textLongMessage"
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content"
+						android:ems="10"
+						android:hint="@string/payload"/>
+
+				</com.google.android.material.textfield.TextInputLayout>
+
+			</LinearLayout>
+
+			<TextView
+				android:textStyle="bold"
+				android:typeface="serif"
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:text="   Payload   "
+				android:layout_marginTop="3dp"
+				android:background="@color/colorSecondaryBackground"
+				android:layout_marginLeft="25dp"/>
+
+		</RelativeLayout>
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:orientation="horizontal">
+
+		<CheckBox
+			android:id="@+id/activity_config_exportBlockRootCheck"
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:textColor="@color/colorText"
+			android:hint="@string/check_block_root"/>
+
+		<LinearLayout
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:orientation="horizontal"
+			android:paddingBottom="5dp">
+
+			<CheckBox
+				android:id="@+id/activity_config_exportValidadeCheck"
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:textColor="@color/colorText"
+				android:hint="@string/check_date_valid"
+				android:layout_marginLeft="20dp"/>
+
+			<TextView
+				android:id="@+id/configMSGText"
+				android:layout_height="match_parent"
+				android:layout_width="wrap_content"
+				android:text="(Unknown)"
+				android:textStyle="bold"
+				android:gravity="center"
+				android:layout_marginLeft="5dp"
+				android:visibility="invisible"/>
+
+		</LinearLayout>
+
+	</LinearLayout>
+
+</LinearLayout>
+

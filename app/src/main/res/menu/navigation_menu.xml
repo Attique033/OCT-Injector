@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+	<group android:id="@+id/grupo1">
+        
+        <item
+            android:title="Payload Generator"
+            android:id="@+id/miGen"
+            android:icon="@drawable/ic_paygen"
+			app:showAsAction="always"/>
+
+		<item
+       		android:id="@+id/miPhoneConfg"
+			android:icon="@drawable/ic_wifi_tethering_black_24dp"
+        	android:title="@string/network_mobile"/>
+        
+        <item
+            android:id="@+id/iphunter2"
+            android:icon="@drawable/ip_hunter"
+            android:title="IP Hunter"/>
+
+	</group>
+
+	<item
+		android:id="@+id/more"
+		android:icon="@drawable/ic_hostcheck"
+		android:title="@string/about"/>
+	
+	<item
+		android:id="@+id/mloadAds"
+		android:title="Watch Ads"
+		android:visible="false"
+		android:icon="@drawable/ic_download"/>
+    
+    <item android:id="@+id/miSettings"
+        android:icon="@drawable/ic_settings"
+        android:title="@string/settings"/>
+
+	<group
+		android:title="SSH Account"
+		android:id="@+id/grupo2">
+
+		<item android:id="@+id/miSettingsSSH"
+			android:icon="@drawable/ic_cloud_black_24dp"
+			android:title="@string/settings_ssh"/>
+
+
+
+	</group>
+
+
+	<group android:id="@+id/grupo3">
+
+		<!--<item android:id="@+id/miSendFeedback"
+			android:icon="@drawable/ic_info"
+			android:title="@string/feedback"/>-->
+        
+        <item android:id="@+id/miAvaliarPlaystore"
+            android:icon="@drawable/ic_rate_review_black_24dp"
+			android:title="Rate us"/>
+
+		<item android:id="@+id/miAdmin"
+			android:icon="@drawable/ic_plane"
+			android:title="Telegram Channel"/>
+
+	</group>
+
+
+</menu>

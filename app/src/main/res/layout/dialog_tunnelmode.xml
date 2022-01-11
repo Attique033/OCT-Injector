@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<LinearLayout
+		android:orientation="horizontal"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:padding="10dp"
+		android:background="@color/colorPrimary">
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Tunnel Mode"
+			android:textColor="#ffffff"
+			android:textSize="16sp"/>
+
+	</LinearLayout>
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Select Options:"
+		android:layout_gravity="center"
+		android:layout_marginTop="10dp"
+		android:textColor="#FF000000"
+		android:textSize="15sp"/>
+
+	<RadioGroup
+		android:orientation="horizontal"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="5dp"
+		android:padding="5dp"
+		android:gravity="center"
+		android:id="@+id/activity_mainMetodoConexaoRadio">
+
+		<RadioButton
+			android:id="@+id/activity_mainSSHDirectRadioButton"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Direct"
+			android:paddingRight="5dp"
+			android:gravity="center"/>
+
+		<RadioButton
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="SSH + Proxy"
+			android:id="@+id/activity_mainSSHProxyRadioButton"
+			android:paddingRight="5dp"
+			android:layout_marginLeft="10dp"
+			android:gravity="center"/>
+
+		<RadioButton
+			android:id="@+id/activity_mainSSLProxyRadioButton"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="SSL/SNI"
+			android:paddingRight="5dp"
+			android:layout_marginLeft="10dp"
+			android:gravity="center"/>
+
+	</RadioGroup>
+
+	<LinearLayout
+		android:orientation="horizontal"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="10dp"
+		android:paddingLeft="10dp">
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Tunnel Type Selected:"
+			android:textColor="#FF000000"/>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:paddingLeft="5dp"
+			android:id="@+id/tunnelmode_selected_layout"
+			android:textColor="#FF000000"
+			android:textStyle="bold"/>
+
+	</LinearLayout>
+
+	
+
+</LinearLayout>
+
